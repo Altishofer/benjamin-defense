@@ -34,20 +34,22 @@ a{color:var(--blue)}
 .gutter{padding-left:max(18px, env(safe-area-inset-left));padding-right:max(18px, env(safe-area-inset-right))}
 
 /* hero */
-.hero{position:relative;color:#fff;background:#1b2340 url("img/campus-abend.jpg") center 35%/cover no-repeat;min-height:min(78vh,640px);display:flex;align-items:flex-end}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,13,25,.35) 0%,rgba(10,13,25,.55) 40%,rgba(10,13,25,.92) 100%)}
-.hero-in{position:relative;text-shadow:0 1px 3px rgba(0,0,0,.45);width:100%;max-width:760px;margin:0 auto;padding-block:120px 40px}
-.eyebrow{font:700 14px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
-.hero h1{font:800 clamp(36px,8.5vw,64px)/1.02 var(--display);margin:14px 0 18px;text-wrap:balance;letter-spacing:-.01em}
-.facts{display:flex;flex-wrap:wrap;gap:10px 22px;font:600 19px/1.4 var(--body);margin:0 0 26px}
+.hero{background:#fff;border-bottom:1px solid var(--line)}
+.hero-in{max-width:760px;margin:0 auto;padding-block:40px 32px}
+.eyebrow{font:700 14px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font:800 clamp(36px,8.5vw,60px)/1.04 var(--display);margin:14px 0 18px;text-wrap:balance;letter-spacing:-.01em;color:var(--ink)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;font:600 19px/1.4 var(--body);margin:0 0 24px;color:var(--ink)}
 .facts span{display:flex;gap:8px;align-items:center}
-.facts svg{flex:none}
+.facts svg{flex:none;color:var(--accent)}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:14px 22px;border-radius:999px;font:700 17px/1 var(--body);text-shadow:none;text-decoration:none;transition:transform .15s ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:14px 22px;border-radius:999px;font:700 17px/1 var(--body);text-decoration:none;transition:transform .15s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .btn-primary{background:var(--accent);color:#fff}
-.btn-ghost{background:#fff;color:var(--ink)}
+.btn-ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.hero-photo{margin:28px 0 0}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:0}
+.hero-photo figcaption{margin-top:8px}
 
 /* sections */
 main{max-width:760px;margin:0 auto;padding-block:28px 40px;display:flex;flex-direction:column;gap:22px}
@@ -112,13 +114,12 @@ figcaption{font-size:16px;color:var(--muted);margin-top:8px}
 .links span{font-size:15px;color:var(--muted)}
 
 .photo-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px}
-.photo-row img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.photo-row img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
 @media (max-width:560px){
   body{font-size:18px}
   section{padding:20px 18px;border-radius:14px}
   main{padding-block:18px 32px;gap:16px}
   h2{font-size:26px}
-  .hero{min-height:auto}
   .hero h1{font-size:38px}
   .facts{flex-direction:column;gap:8px;font-size:18px}
   .btns{flex-direction:column}
@@ -127,7 +128,7 @@ figcaption{font-size:16px;color:var(--muted);margin-top:8px}
   .links{grid-template-columns:1fr}
   .punctual{grid-template-columns:1fr;gap:8px}
   .photo-row{grid-template-columns:1fr}
-  .hero-in{padding-block:100px 30px}
+  .hero-in{padding-block:28px 24px}
 }
 footer{max-width:760px;margin:0 auto;padding-block:8px 48px;color:var(--muted);font-size:14px;line-height:1.55}
 footer a{color:inherit}
@@ -149,6 +150,10 @@ footer a{color:inherit}
       <a class="btn btn-primary" href="#anreise">Anreise &amp; Parkieren</a>
       <a class="btn btn-ghost" href="einladung.ics">In den Kalender</a>
     </div>
+    <figure class="hero-photo">
+      <img src="img/saal-vorne.jpg" width="1200" height="900" alt="Der Hörsaal HCI G 7 von hinten gesehen: ansteigende Sitzreihen aus Holz, vorne die Wandtafeln.">
+      <figcaption>Hier findet der Vortrag statt: Hörsaal HCI G 7, rund 300 Plätze.</figcaption>
+    </figure>
   </div>
 </header>
 
@@ -243,17 +248,20 @@ footer a{color:inherit}
   </section>
 
   <section aria-labelledby="ort">
-    <h2 id="ort">Vor Ort</h2>
-    <p class="lead">So sieht das Gebäude HCI aus, in dem der Hörsaal G 7 liegt.</p>
-    <figure><img src="img/hci.jpg" loading="lazy" alt="Das Gebäude HCI auf dem Campus Hönggerberg mit Glasfassade, im Winter."></figure>
-    <p style="margin-top:14px">Im HCI geht ihr auf Stockwerk G zum Hörsaal G 7. Zieht euch warm an, Anfang Dezember ist es auf dem Hönggerberg meist kalt.</p>
+    <h2 id="ort">Gebäude und Saal</h2>
+    <p class="lead">Der Hörsaal liegt im Gebäude HCI auf Stockwerk G.</p>
+    <div class="photo-row">
+      <figure style="margin:0"><img src="img/hci.jpg" loading="lazy" alt="Das Gebäude HCI mit Glasfassade auf dem Campus Hönggerberg."><figcaption>Gebäude HCI</figcaption></figure>
+      <figure style="margin:0"><img src="img/saal-seite.jpg" loading="lazy" alt="Der Hörsaal HCI G 7 von der Seite: Holzbänke in ansteigenden Reihen."><figcaption>Hörsaal G 7</figcaption></figure>
+    </div>
+    <p style="margin-top:14px">Zieht euch warm an, Anfang Dezember ist es auf dem Hönggerberg meist kalt.</p>
   </section>
 
 </main>
 
 <footer class="gutter">
-  Fotos: <a href="https://commons.wikimedia.org/wiki/File:Eth_h%C3%B6nggerberg_Zurich_Ank_Kumar_05.jpg">Ank Kumar</a> (CC BY-SA 4.0),
-  <a href="https://commons.wikimedia.org/wiki/File:ETH_H%C3%B6nggerberg_HCI.JPG">Hannes Röst</a> (CC BY-SA 3.0) via Wikimedia Commons.
+  Fotos Hörsaal: <a href="https://ethz.ch/staffnet/de/service/raeume-gebaeude/rauminfo/raumdetails.html?region=Z&amp;areal=H&amp;gebaeude=HCI&amp;geschoss=G&amp;raumNr=7">ETH Zürich, Rauminfo</a>.
+  Foto Gebäude: <a href="https://commons.wikimedia.org/wiki/File:ETH_H%C3%B6nggerberg_HCI.JPG">Hannes Röst</a> (CC BY-SA 3.0) via Wikimedia Commons.
   Karten: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a>.
   Private Einladung, keine offizielle Seite der ETH Zürich.
 </footer>
