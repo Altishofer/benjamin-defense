@@ -7,9 +7,9 @@
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="noindex, nofollow">
 <title>Benjamins Doktortitel-Verteidigung</title>
-<meta name="description" content="Mittwoch, 2. Dezember 2026, ETH Hönggerberg, HCI G 7. Bitte bis 11:45 da sein. Anschliessend Apéro.">
+<meta name="description" content="Mittwoch, 2. Dezember 2026, ETH Hönggerberg, HCI G 7. Bitte bis 11:45 da sein. Danach Apéro.">
 <meta property="og:title" content="Benjamins Doktortitel-Verteidigung">
-<meta property="og:description" content="Mittwoch, 2. Dezember 2026 · ETH Hönggerberg, Hörsaal HCI G 7 · Bitte bis 11:45 da sein. Anschliessend Apéro.">
+<meta property="og:description" content="Mittwoch, 2. Dezember 2026 · ETH Hönggerberg, Hörsaal HCI G 7 · Bitte bis 11:45 da sein. Danach Apéro.">
 <meta property="og:image" content="https://altishofer.github.io/benji-defense/img/vorschau.jpg">
 <meta property="og:url" content="https://altishofer.github.io/benji-defense/">
 <meta property="og:type" content="website">
@@ -20,8 +20,8 @@
 /* Layout: full-bleed photo hero, then a single reading column of sections; maps and photos break out wider */
 :root{
   --bg:#eef0f4; --card:#ffffff; --ink:#0f1420; --muted:#3b4252; --line:#c9ceda;
-  --accent:#9b1c33; --accent-ink:#ffffff; --accent-soft:#f7e4e8;
-  --blue:#164f9c; --blue-soft:#e3ecf8; --grey:#373741;
+  --accent:#2c5f6b; --accent-ink:#ffffff; --accent-soft:#e6f0f1;
+  --blue:#2f5d8a; --blue-soft:#ebf0f6; --grey:#373741;
   --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
   --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
   color-scheme:light;
@@ -54,8 +54,8 @@ h3{font:700 20px/1.3 var(--display);margin:22px 0 8px}
 p{margin:0 0 12px}
 p:last-child{margin-bottom:0}
 
-.punctual{background:var(--accent);color:#fff;border:0;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
-.punctual .clock{font:800 44px/1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.punctual{background:var(--accent-soft);color:var(--ink);border:1px solid #c5dadd;border-left:6px solid var(--accent);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.punctual .clock{color:var(--accent);font:800 44px/1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .punctual strong{display:block;font:800 23px/1.3 var(--display);margin-bottom:6px}
 .punctual p{margin:0}
 
@@ -82,9 +82,8 @@ li.key .dot{background:var(--accent)}
 .route{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-direction:column;gap:10px}
 .route li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
 .line{display:inline-block;min-width:72px;text-align:center;padding:5px 8px;border-radius:6px;font:700 15px/1.3 var(--body);color:#fff;background:var(--blue)}
-.line.tram{background:#0067b1}
-.line.bus{background:#1e5aaa}
-.line.train{background:#c60018}
+.line.tram{background:#2f5d8a}
+.line.bus{background:#3d6690}
 .line.walk{background:var(--grey);color:var(--card)}
 .note{background:var(--blue-soft);border-left:5px solid var(--blue);border-radius:10px;padding:14px 16px;font-size:17px;margin:14px 0}
 .note.tip{background:var(--accent-soft);border-left-color:var(--accent)}
@@ -125,16 +124,16 @@ footer a{color:inherit}
 
 <header class="hero">
   <div class="hero-in gutter">
-    <div class="eyebrow">Einladung · Campus Hönggerberg</div>
+    <div class="eyebrow">Einladung</div>
     <h1>Benjamins Doktortitel-Verteidigung</h1>
     <div class="facts">
       <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Mittwoch, 2. Dezember 2026</span>
-      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>ab 11:45 Uhr</span>
-      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Hönggerberg, Hörsaal HCI G 7</span>
+      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>11:45 Uhr</span>
+      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>ETH Hönggerberg, Hörsaal HCI G 7</span>
     </div>
     <figure class="hero-photo">
       <img src="img/saal-vorne.jpg" width="1200" height="900" alt="Der Hörsaal HCI G 7 von hinten gesehen: ansteigende Sitzreihen aus Holz, vorne die Wandtafeln.">
-      <figcaption>Hier findet der Vortrag statt: Hörsaal HCI G 7, rund 300 Plätze.</figcaption>
+      <figcaption>Hörsaal HCI G 7</figcaption>
     </figure>
   </div>
 </header>
@@ -145,89 +144,77 @@ footer a{color:inherit}
     <div class="clock">11:45</div>
     <div>
       <strong>Bitte bis 11:45 im Hörsaal sein.</strong>
-      <p>Der Vortrag beginnt pünktlich um 12:00. Wer später kommt, wartet bitte vor der Tür, bis der Vortrag vorbei ist (ca. 12:20). Benjamin zuliebe. Plant für die Anreise etwas Reserve ein.</p>
+      <p>Der Vortrag beginnt um 12:00. Wer später kommt, wartet bitte vor der Tür bis ca. 12:20.</p>
     </div>
   </section>
 
   <section aria-labelledby="ablauf">
     <h2 id="ablauf">Ablauf</h2>
-    <p class="lead">Der Vortrag ist öffentlich, die Prüfung danach findet hinter verschlossenen Türen statt.</p>
     <ol class="timeline">
-      <li><span class="t">11:45</span><span class="dot"></span><span class="d"><b>Eintreffen</b> im Hörsaal HCI G 7<small>Plätze nehmen, Handy lautlos</small></span></li>
-      <li class="key"><span class="t">12:00</span><span class="dot"></span><span class="d"><b>Öffentlicher Vortrag</b><small>Benjamin stellt seine Doktorarbeit vor, ca. 20 Minuten</small></span></li>
-      <li class="key"><span class="t">12:20</span><span class="dot"></span><span class="d"><b>Apéro</b> im Foyer vor dem Hörsaal<small>Benjamin ist währenddessen in der Prüfung bei den Experten</small></span></li>
-      <li class="key"><span class="t">~14:30</span><span class="dot"></span><span class="d"><b>Bekanntgabe des Ergebnisses</b><small>durch die Experten, anschliessend Dank und Doktorhut</small></span></li>
-      <li><span class="t">~15:30</span><span class="dot"></span><span class="d"><b>Gemütlicher Ausklang</b></span></li>
+      <li><span class="t">11:45</span><span class="dot"></span><span class="d"><b>Eintreffen</b><small>Hörsaal HCI G 7</small></span></li>
+      <li class="key"><span class="t">12:00</span><span class="dot"></span><span class="d"><b>Vortrag</b><small>ca. 20 Minuten, öffentlich</small></span></li>
+      <li class="key"><span class="t">12:20</span><span class="dot"></span><span class="d"><b>Apéro</b><small>Foyer vor dem Hörsaal, Benjamin ist in der Prüfung</small></span></li>
+      <li class="key"><span class="t">~14:30</span><span class="dot"></span><span class="d"><b>Bekanntgabe des Ergebnisses</b><small>danach Dank und Doktorhut</small></span></li>
+      <li><span class="t">~15:30</span><span class="dot"></span><span class="d"><b>Ende</b></span></li>
     </ol>
   </section>
 
   <section class="apero" aria-labelledby="apero">
     <div class="txt">
       <h2 id="apero">Apéro</h2>
-      <p class="lead">Nach dem Vortrag laden wir alle zum Apéro ein. Während Benjamin geprüft wird, stossen wir schon mal an und warten gemeinsam auf das Ergebnis.</p>
+      <p>Alle sind herzlich zum Apéro eingeladen.</p>
       <ul>
-        <li>Kalte Platten mit Fleisch, Käse und Gemüse</li>
-        <li>Frisches Brot und vegetarische Häppchen</li>
-        <li>Weisswein, Bier, Mineral und Softdrinks</li>
+        <li>Kalte Platten, Brot, Vegetarisches</li>
+        <li>Wein, Bier, Mineral, Softdrinks</li>
       </ul>
-      <p>Es ist Mittagszeit, ihr müsst also nicht vorher essen gehen. Bitte bleibt im Foyer etwas leise, im Gebäude finden Vorlesungen statt.</p>
+      <p>Im Gebäude laufen Vorlesungen. Bitte etwas leise sein.</p>
     </div>
   </section>
 
   <section id="anreise" aria-labelledby="anreise-h">
     <h2 id="anreise-h">Anreise</h2>
-    <p class="lead">Wir empfehlen den ÖV. Die Haltestelle „ETH Hönggerberg“ liegt 2 Minuten zu Fuss vom Hörsaal entfernt.</p>
 
     <div id="oev">
       <h3 class="mode">Mit ÖV</h3>
-      <h3>Ab Zürich HB (ca. 25 Min.)</h3>
+      <h3>Ab Zürich HB, ca. 25 Min.</h3>
       <ul class="route">
-        <li><span class="line tram">Tram 11</span><span>ab „Bahnhofquai/HB“ bis „Bucheggplatz“</span></li>
-        <li><span class="line bus">Bus 69</span><span>ab „Bucheggplatz“ bis „ETH Hönggerberg“</span></li>
+        <li><span class="line tram">Tram 11</span><span>bis Bucheggplatz</span></li>
+        <li><span class="line bus">Bus 69</span><span>bis ETH Hönggerberg</span></li>
       </ul>
       <h3>Ab Bahnhof Oerlikon</h3>
       <ul class="route">
-        <li><span class="line bus">Bus 80</span><span>ab „Bahnhof Oerlikon Nord“ Richtung Triemlispital bis „ETH Hönggerberg“</span></li>
+        <li><span class="line bus">Bus 80</span><span>ab Oerlikon Nord bis ETH Hönggerberg</span></li>
       </ul>
-      <div class="note">Für die Stadt Zürich reicht ein Ticket für Zone 110. Die genauen Verbindungen findet ihr in der SBB-App, Ziel: <b>Zürich, ETH Hönggerberg</b>.</div>
+      <p>Von der Haltestelle 2 Minuten zu Fuss. Ticket: Zone 110.</p>
       <figure>
         <img src="img/karte-zuerich.jpg" width="1153" height="1239" loading="lazy" alt="Übersichtskarte Zürich: von Zürich HB mit Tram 11 zum Bucheggplatz und mit Bus 69 zur ETH Hönggerberg, oder ab Bahnhof Oerlikon mit Bus 80.">
-        <figcaption>Übersicht: So kommt ihr vom Hauptbahnhof oder von Oerlikon auf den Hönggerberg.</figcaption>
       </figure>
     </div>
 
     <div id="auto">
       <h3 class="mode">Mit dem Auto</h3>
-      <h3>Parkhaus P2</h3>
-      <p>Am nächsten beim Hörsaal liegt das <b>Parkhaus P2</b> an der Albert-Einstein-Strasse, beim Kreisel. Von dort sind es rund 5 Minuten zu Fuss über den Stefano-Franscini-Platz bis zum HCI.</p>
-      <ul class="route">
-        <li><span class="line walk">Navi</span><span>Ziel „Parkhaus P2, Albert-Einstein-Strasse, 8093 Zürich“ oder den Link unten verwenden</span></li>
-      </ul>
-      <div class="note">Das Parkhaus ist kostenpflichtig, bezahlt wird am Automaten. Die Wolfgang-Pauli-Strasse mitten durch den Campus ist für Autos gesperrt, fahrt also über den Hönggerbergring.</div>
-      <div class="note tip"><b>Tipp:</b> Laut ETH erhaltet ihr ein Gratis-Ausfahrticket, wenn ihr euer Parkticket in der <b>Campus Info im Gebäude HIL</b> abgebt. Fragt am besten gleich bei der Ankunft nach.</div>
-      <p>Parkplätze sind am Hönggerberg knapp. Wenn möglich, bildet Fahrgemeinschaften.</p>
+      <p><b>Parkhaus P2</b>, Albert-Einstein-Strasse, 8093 Zürich. Von dort 5 Minuten zu Fuss.</p>
+      <p>Kostenpflichtig. Parkplätze sind knapp.</p>
+      <p>Gratis-Ausfahrt laut ETH: Parkticket in der Campus Info (Gebäude HIL) abgeben.</p>
     </div>
 
     <figure>
-      <img src="img/karte-campus.jpg" width="1260" height="1170" loading="lazy" alt="Campusplan: von der Bushaltestelle ETH Hönggerberg rund 150 Meter nach Süden entlang der Wolfgang-Pauli-Strasse zum HCI; vom Parkhaus P2 beim Kreisel an der Albert-Einstein-Strasse über den Stefano-Franscini-Platz zum HCI.">
-      <figcaption>Auf dem Campus: Die Wege von der Bushaltestelle und vom Parkhaus P2 zum Hörsaal HCI G 7.</figcaption>
-      <div class="legend"><span><i style="background:#1e5aaa"></i>Fussweg ab Bus (2 Min.)</span><span><i style="background:#464650"></i>Fussweg ab Parkhaus P2 (5 Min.)</span></div>
+      <img src="img/karte-campus.jpg" width="1260" height="1170" loading="lazy" alt="Campusplan: von der Bushaltestelle ETH Hönggerberg rund 150 Meter nach Süden zum HCI; vom Parkhaus P2 an der Albert-Einstein-Strasse über den Stefano-Franscini-Platz zum HCI.">
+      <div class="legend"><span><i style="background:#2f5d8a"></i>ab Bus, 2 Min.</span><span><i style="background:#4a4f58"></i>ab Parkhaus P2, 5 Min.</span></div>
     </figure>
 
     <ul class="links">
-      <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=47.407528,8.507715&amp;travelmode=transit" target="_blank" rel="noopener"><b>Route mit ÖV</b><span>Google Maps, bis zum HCI</span></a></li>
-      <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=47.40868,8.50476&amp;travelmode=driving" target="_blank" rel="noopener"><b>Navigation zum Parkhaus P2</b><span>Google Maps, mit dem Auto</span></a></li>
-      <li><a href="https://www.google.com/maps/search/?api=1&amp;query=47.407528,8.507715" target="_blank" rel="noopener"><b>Standort HCI</b><span>Google Maps</span></a></li>
-      <li><a href="https://ethz.ch/de/utils/location.html?building=HCI&amp;floor=G&amp;room=7" target="_blank" rel="noopener"><b>Raumplan HCI G 7</b><span>Gebäudeplan der ETH</span></a></li>
+      <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=47.407528,8.507715&amp;travelmode=transit" target="_blank" rel="noopener"><b>Route mit ÖV</b><span>Google Maps</span></a></li>
+      <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=47.40868,8.50476&amp;travelmode=driving" target="_blank" rel="noopener"><b>Route zum Parkhaus P2</b><span>Google Maps</span></a></li>
+      <li><a href="https://ethz.ch/de/utils/location.html?building=HCI&amp;floor=G&amp;room=7" target="_blank" rel="noopener"><b>Raumplan HCI G 7</b><span>ETH</span></a></li>
     </ul>
   </section>
 
   <section aria-labelledby="ort">
     <h2 id="ort">Gebäude und Saal</h2>
-    <p class="lead">Der Hörsaal liegt im Gebäude HCI auf Stockwerk G.</p>
     <div class="photo-row">
-      <figure style="margin:0"><img src="img/hci.jpg" loading="lazy" alt="Das Gebäude HCI mit Glasfassade auf dem Campus Hönggerberg."><figcaption>Gebäude HCI</figcaption></figure>
-      <figure style="margin:0"><img src="img/saal-seite.jpg" loading="lazy" alt="Der Hörsaal HCI G 7 von der Seite: Holzbänke in ansteigenden Reihen."><figcaption>Hörsaal G 7</figcaption></figure>
+      <figure style="margin:0"><img src="img/hci.jpg" loading="lazy" alt="Das Gebäude HCI mit Glasfassade."><figcaption>Gebäude HCI</figcaption></figure>
+      <figure style="margin:0"><img src="img/saal-seite.jpg" loading="lazy" alt="Der Hörsaal HCI G 7 von der Seite: Holzbänke in ansteigenden Reihen."><figcaption>Hörsaal G 7, Stockwerk G</figcaption></figure>
     </div>
   </section>
 
