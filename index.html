@@ -42,7 +42,7 @@ a{color:var(--blue)}
 .facts span{display:flex;gap:8px;align-items:center}
 .facts svg{flex:none;color:var(--accent)}
 .hero-photo{margin:28px 0 0}
-.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:0}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:16px;border:0}
 .hero-photo figcaption{margin-top:8px}
 
 /* sections */
@@ -101,6 +101,12 @@ figcaption{font-size:16px;color:var(--muted);margin-top:8px}
 .links b::after{content:" →"}
 .links span{font-size:15px;color:var(--muted)}
 
+.explain{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.explain div{background:var(--accent-soft);border-radius:10px;padding:12px;text-align:center}
+.explain dt{font:800 30px/1 var(--display);color:var(--accent)}
+.explain dd{margin:6px 0 0;font-size:15px;line-height:1.3}
+.steps{margin:16px 0;padding-left:24px}
+.steps li{margin:0 0 10px;padding-left:4px}
 .photo-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px}
 .photo-row img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
 @media (max-width:560px){
@@ -113,7 +119,13 @@ figcaption{font-size:16px;color:var(--muted);margin-top:8px}
       .punctual .clock{font-size:52px}
   .links{grid-template-columns:1fr}
   .punctual{grid-template-columns:1fr;gap:8px}
-  .photo-row{grid-template-columns:1fr}
+  .explain{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.explain div{background:var(--accent-soft);border-radius:10px;padding:12px;text-align:center}
+.explain dt{font:800 30px/1 var(--display);color:var(--accent)}
+.explain dd{margin:6px 0 0;font-size:15px;line-height:1.3}
+.steps{margin:16px 0;padding-left:24px}
+.steps li{margin:0 0 10px;padding-left:4px}
+.photo-row{grid-template-columns:1fr}
   .hero-in{padding-block:28px 24px}
 }
 footer{max-width:760px;margin:0 auto;padding-block:8px 48px;color:var(--muted);font-size:14px;line-height:1.55}
@@ -129,11 +141,11 @@ footer a{color:inherit}
     <div class="facts">
       <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Mittwoch, 2. Dezember 2026</span>
       <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>11:45 Uhr</span>
-      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>ETH Hönggerberg, Hörsaal HCI G 7</span>
+      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>ETH Zürich, Campus Hönggerberg</span>
     </div>
     <figure class="hero-photo">
-      <img src="img/saal-vorne.jpg" width="1200" height="900" alt="Der Hörsaal HCI G 7 von hinten gesehen: ansteigende Sitzreihen aus Holz, vorne die Wandtafeln.">
-      <figcaption>Hörsaal HCI G 7</figcaption>
+      <img src="img/hci.jpg" width="1200" height="800" alt="Das Gebäude HCI: ein grosses, mehrstöckiges Glasgebäude auf dem Campus Hönggerberg.">
+      <figcaption>Das Gebäude HCI. Darin liegt der Hörsaal G 7.</figcaption>
     </figure>
   </div>
 </header>
@@ -148,12 +160,28 @@ footer a{color:inherit}
     </div>
   </section>
 
+  <section aria-labelledby="wo">
+    <h2 id="wo">Wo genau?</h2>
+    <p>Die ETH Zürich hat einen zweiten Campus am Stadtrand, auf dem Hönggerberg. Dort findet alles statt.</p>
+    <dl class="explain">
+      <div><dt>HCI</dt><dd>Name des Gebäudes</dd></div>
+      <div><dt>G</dt><dd>Stockwerk im Gebäude</dd></div>
+      <div><dt>7</dt><dd>Nummer des Hörsaals</dd></div>
+    </dl>
+    <ol class="steps">
+      <li>Mit Bus bis zur Haltestelle <b>„ETH Hönggerberg“</b> fahren, oder im <b>Parkhaus P2</b> parkieren.</li>
+      <li>Zu Fuss zum grossen Glasgebäude <b>HCI</b> gehen (Karte unten). Ab Bus 2 Minuten, ab Parkhaus 5 Minuten.</li>
+      <li>Im Gebäude den Schildern <b>„G 7“</b> folgen. Die ETH benennt Stockwerke mit Buchstaben statt Zahlen, G ist ein Stockwerk.</li>
+    </ol>
+    <figure style="margin:16px 0 0"><img src="img/saal-vorne.jpg" loading="lazy" alt="Der Hörsaal HCI G 7 von hinten gesehen: ansteigende Sitzreihen aus Holz, vorne die Wandtafeln."><figcaption>Der Hörsaal G 7 von innen, rund 300 Plätze</figcaption></figure>
+  </section>
+
   <section aria-labelledby="ablauf">
     <h2 id="ablauf">Ablauf</h2>
     <ol class="timeline">
-      <li><span class="t">11:45</span><span class="dot"></span><span class="d"><b>Eintreffen</b><small>Hörsaal HCI G 7</small></span></li>
+      <li><span class="t">11:45</span><span class="dot"></span><span class="d"><b>Eintreffen</b><small>im Hörsaal (Gebäude HCI, Stockwerk G, Hörsaal 7)</small></span></li>
       <li class="key"><span class="t">12:00</span><span class="dot"></span><span class="d"><b>Vortrag</b><small>ca. 20 Minuten, öffentlich</small></span></li>
-      <li class="key"><span class="t">12:20</span><span class="dot"></span><span class="d"><b>Apéro</b><small>Foyer vor dem Hörsaal, Benjamin ist in der Prüfung</small></span></li>
+      <li class="key"><span class="t">12:20</span><span class="dot"></span><span class="d"><b>Apéro</b><small>im Vorraum direkt vor dem Hörsaal. Benjamin ist währenddessen in der Prüfung.</small></span></li>
       <li class="key"><span class="t">~14:30</span><span class="dot"></span><span class="d"><b>Bekanntgabe des Ergebnisses</b><small>danach Dank und Doktorhut</small></span></li>
       <li><span class="t">~15:30</span><span class="dot"></span><span class="d"><b>Ende</b></span></li>
     </ol>
@@ -162,7 +190,7 @@ footer a{color:inherit}
   <section class="apero" aria-labelledby="apero">
     <div class="txt">
       <h2 id="apero">Apéro</h2>
-      <p>Alle sind herzlich zum Apéro eingeladen.</p>
+      <p>Alle sind herzlich zum Apéro eingeladen. Er findet direkt vor dem Hörsaal statt, ihr müsst nirgends hingehen.</p>
       <ul>
         <li>Kalte Platten, Brot, Vegetarisches</li>
         <li>Wein, Bier, Mineral, Softdrinks</li>
@@ -178,14 +206,14 @@ footer a{color:inherit}
       <h3 class="mode">Mit ÖV</h3>
       <h3>Ab Zürich HB, ca. 25 Min.</h3>
       <ul class="route">
-        <li><span class="line tram">Tram 11</span><span>bis Bucheggplatz</span></li>
+        <li><span class="line tram">Tram 11</span><span>ab Haltestelle „Bahnhofquai/HB“ bis Bucheggplatz, dort umsteigen</span></li>
         <li><span class="line bus">Bus 69</span><span>bis ETH Hönggerberg</span></li>
       </ul>
       <h3>Ab Bahnhof Oerlikon</h3>
       <ul class="route">
-        <li><span class="line bus">Bus 80</span><span>ab Oerlikon Nord bis ETH Hönggerberg</span></li>
+        <li><span class="line bus">Bus 80</span><span>ab Haltestelle „Bahnhof Oerlikon Nord“ bis ETH Hönggerberg</span></li>
       </ul>
-      <p>Von der Haltestelle 2 Minuten zu Fuss. Ticket: Zone 110.</p>
+      <p>Von der Haltestelle „ETH Hönggerberg“ sind es 2 Minuten zu Fuss. Ticket: Stadt Zürich, Zone 110. In der SBB-App als Ziel „Zürich, ETH Hönggerberg“ eingeben.</p>
       <figure>
         <img src="img/karte-zuerich.jpg" width="1153" height="1239" loading="lazy" alt="Übersichtskarte Zürich: von Zürich HB mit Tram 11 zum Bucheggplatz und mit Bus 69 zur ETH Hönggerberg, oder ab Bahnhof Oerlikon mit Bus 80.">
       </figure>
@@ -195,7 +223,7 @@ footer a{color:inherit}
       <h3 class="mode">Mit dem Auto</h3>
       <p><b>Parkhaus P2</b>, Albert-Einstein-Strasse, 8093 Zürich. Von dort 5 Minuten zu Fuss.</p>
       <p>Kostenpflichtig. Parkplätze sind knapp.</p>
-      <p>Gratis-Ausfahrt laut ETH: Parkticket in der Campus Info (Gebäude HIL) abgeben.</p>
+      <p>Gratis-Ausfahrt laut ETH: Parkticket an der Campus Info abgeben (im Gebäude HIL).</p>
     </div>
 
     <figure>
@@ -206,17 +234,10 @@ footer a{color:inherit}
     <ul class="links">
       <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=47.407528,8.507715&amp;travelmode=transit" target="_blank" rel="noopener"><b>Route mit ÖV</b><span>Google Maps</span></a></li>
       <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=47.40868,8.50476&amp;travelmode=driving" target="_blank" rel="noopener"><b>Route zum Parkhaus P2</b><span>Google Maps</span></a></li>
-      <li><a href="https://ethz.ch/de/utils/location.html?building=HCI&amp;floor=G&amp;room=7" target="_blank" rel="noopener"><b>Raumplan HCI G 7</b><span>ETH</span></a></li>
+      <li><a href="https://ethz.ch/de/utils/location.html?building=HCI&amp;floor=G&amp;room=7" target="_blank" rel="noopener"><b>Lage des Hörsaals im Gebäude</b><span>Raumplan der ETH</span></a></li>
     </ul>
   </section>
 
-  <section aria-labelledby="ort">
-    <h2 id="ort">Gebäude und Saal</h2>
-    <div class="photo-row">
-      <figure style="margin:0"><img src="img/hci.jpg" loading="lazy" alt="Das Gebäude HCI mit Glasfassade."><figcaption>Gebäude HCI</figcaption></figure>
-      <figure style="margin:0"><img src="img/saal-seite.jpg" loading="lazy" alt="Der Hörsaal HCI G 7 von der Seite: Holzbänke in ansteigenden Reihen."><figcaption>Hörsaal G 7, Stockwerk G</figcaption></figure>
-    </div>
-  </section>
 
 </main>
 
