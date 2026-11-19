@@ -42,8 +42,7 @@ a{color:var(--blue)}
 .facts span{display:flex;gap:8px;align-items:center}
 .facts svg{flex:none;color:var(--accent)}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:14px 22px;border-radius:999px;font:700 17px/1 var(--body);text-decoration:none;transition:transform .15s ease}
-.btn:hover{transform:translateY(-1px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:14px 22px;border-radius:999px;font:700 17px/1 var(--body);text-decoration:none}
 .btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .btn-primary{background:var(--accent);color:#fff}
 .btn-ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
@@ -83,10 +82,8 @@ li.key .dot{background:var(--accent)}
 .apero li{margin:3px 0}
 
 /* travel */
-.tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:8px 0 18px;padding:4px;background:var(--bg);border:1px solid var(--line);border-radius:14px}
-.tab{appearance:none;border:0;background:transparent;color:var(--ink);min-height:50px;padding:12px 10px;border-radius:10px;font:700 17px/1.2 var(--body);cursor:pointer}
-.tab[aria-selected="true"]{background:var(--blue);color:#fff}
-.tab:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.mode{font:800 22px/1.2 var(--display);margin:26px 0 12px;padding-top:18px;border-top:2px solid var(--line);color:var(--blue)}
+#oev .mode{border-top:0;padding-top:0;margin-top:8px}
 .route{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-direction:column;gap:10px}
 .route li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
 .line{display:inline-block;min-width:72px;text-align:center;padding:5px 8px;border-radius:6px;font:700 15px/1.3 var(--body);color:#fff;background:var(--blue)}
@@ -100,13 +97,11 @@ figure{margin:16px 0 8px}
 figure img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
 figcaption{font-size:16px;color:var(--muted);margin-top:8px}
 .legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px;color:var(--ink);margin-top:8px}
-.zoom{display:block;position:relative}
-.zoom::after{content:"Tippen zum Vergrössern";position:absolute;left:10px;bottom:10px;background:rgba(15,20,32,.82);color:#fff;font:700 13px/1 var(--body);padding:8px 10px;border-radius:999px}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{display:inline-block;width:26px;height:7px;border-radius:4px}
 
 .links{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
-.links a{display:flex;flex-direction:column;gap:2px;min-height:56px;padding:14px 16px;border:2px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink);transition:border-color .15s ease}
+.links a{display:flex;flex-direction:column;gap:2px;min-height:56px;padding:14px 16px;border:2px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink)}
 .links a:hover,.links a:focus-visible{border-color:var(--blue)}
 .links a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .links b{color:var(--blue);font-weight:700;font-size:18px}
@@ -196,12 +191,8 @@ footer a{color:inherit}
     <h2 id="anreise-h">Anreise</h2>
     <p class="lead">Wir empfehlen den ÖV. Die Haltestelle „ETH Hönggerberg“ liegt 2 Minuten zu Fuss vom Hörsaal entfernt.</p>
 
-    <div class="tabs" role="tablist" aria-label="Verkehrsmittel">
-      <button class="tab" role="tab" id="tab-oev" aria-controls="p-oev" aria-selected="true">Mit ÖV</button>
-      <button class="tab" role="tab" id="tab-auto" aria-controls="p-auto" aria-selected="false">Mit dem Auto</button>
-    </div>
-
-    <div id="p-oev" role="tabpanel" aria-labelledby="tab-oev">
+    <div id="oev">
+      <h3 class="mode">Mit ÖV</h3>
       <h3>Ab Zürich HB (ca. 25 Min.)</h3>
       <ul class="route">
         <li><span class="line tram">Tram 11</span><span>ab „Bahnhofquai/HB“ bis „Bucheggplatz“</span></li>
@@ -217,12 +208,13 @@ footer a{color:inherit}
       </ul>
       <div class="note">Für die Stadt Zürich reicht ein Ticket für Zone 110. Die genauen Verbindungen findet ihr in der SBB-App, Ziel: <b>Zürich, ETH Hönggerberg</b>.</div>
       <figure>
-        <a class="zoom" href="img/karte-zuerich.jpg" target="_blank" rel="noopener"><img src="img/karte-zuerich.jpg" width="1153" height="1239" loading="lazy" alt="Übersichtskarte Zürich: von Zürich HB mit Tram 11 zum Bucheggplatz und mit Bus 69 zur ETH Hönggerberg, oder ab Bahnhof Oerlikon mit Bus 80."></a>
+        <img src="img/karte-zuerich.jpg" width="1153" height="1239" loading="lazy" alt="Übersichtskarte Zürich: von Zürich HB mit Tram 11 zum Bucheggplatz und mit Bus 69 zur ETH Hönggerberg, oder ab Bahnhof Oerlikon mit Bus 80.">
         <figcaption>Übersicht: So kommt ihr vom Hauptbahnhof oder von Oerlikon auf den Hönggerberg.</figcaption>
       </figure>
     </div>
 
-    <div id="p-auto" role="tabpanel" aria-labelledby="tab-auto" hidden>
+    <div id="auto">
+      <h3 class="mode">Mit dem Auto</h3>
       <h3>Parkhaus P2</h3>
       <p>Am nächsten beim Hörsaal liegt das <b>Parkhaus P2</b> an der Albert-Einstein-Strasse, beim Kreisel. Von dort sind es rund 5 Minuten zu Fuss über den Stefano-Franscini-Platz bis zum HCI.</p>
       <ul class="route">
@@ -234,7 +226,7 @@ footer a{color:inherit}
     </div>
 
     <figure>
-      <a class="zoom" href="img/karte-campus.jpg" target="_blank" rel="noopener"><img src="img/karte-campus.jpg" width="1260" height="1170" loading="lazy" alt="Campusplan: von der Bushaltestelle ETH Hönggerberg rund 150 Meter nach Süden entlang der Wolfgang-Pauli-Strasse zum HCI; vom Parkhaus P2 beim Kreisel an der Albert-Einstein-Strasse über den Stefano-Franscini-Platz zum HCI."></a>
+      <img src="img/karte-campus.jpg" width="1260" height="1170" loading="lazy" alt="Campusplan: von der Bushaltestelle ETH Hönggerberg rund 150 Meter nach Süden entlang der Wolfgang-Pauli-Strasse zum HCI; vom Parkhaus P2 beim Kreisel an der Albert-Einstein-Strasse über den Stefano-Franscini-Platz zum HCI.">
       <figcaption>Auf dem Campus: Die Wege von der Bushaltestelle und vom Parkhaus P2 zum Hörsaal HCI G 7.</figcaption>
       <div class="legend"><span><i style="background:#1e5aaa"></i>Fussweg ab Bus (2 Min.)</span><span><i style="background:#464650"></i>Fussweg ab Parkhaus P2 (5 Min.)</span></div>
     </figure>
@@ -266,23 +258,5 @@ footer a{color:inherit}
   Private Einladung, keine offizielle Seite der ETH Zürich.
 </footer>
 
-<script>
-(function(){
-  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
-  function show(t){
-    tabs.forEach(function(x){
-      var on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1;
-      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
-    });
-  }
-  tabs.forEach(function(t,i){
-    t.addEventListener('click',function(){show(t)});
-    t.addEventListener('keydown',function(e){
-      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];show(n);n.focus();}
-    });
-  });
-  if(location.hash==='#auto'){show(tabs[1]);}
-})();
-</script>
 </body>
 </html>
