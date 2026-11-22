@@ -27,8 +27,8 @@ DTSTART;TZID=Europe/Zurich:20261202T114500
 DTEND;TZID=Europe/Zurich:20261202T153000
 SUMMARY:Benjamins Doktortitel-Verteidigung
 LOCATION:ETH Zürich Campus Hönggerberg\, Gebäude HCI\, Hörsaal G7
-DESCRIPTION:Bitte bis 11:45 im Hörsaal sein\, der Vortrag beginnt pünktlich um 12:00. Danach Apéro. Alle Infos: https://altishofer.github.io/benji-defense/
-URL:https://altishofer.github.io/benji-defense/
+DESCRIPTION:Bitte bis 11:45 im Hörsaal sein\, der Vortrag beginnt pünktlich um 12:00. Danach Apéro. Alle Infos: https://altishofer.github.io/benjamin-defense/
+URL:https://altishofer.github.io/benjamin-defense/
 BEGIN:VALARM
 TRIGGER:-PT90M
 ACTION:DISPLAY
